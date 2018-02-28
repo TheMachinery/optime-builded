@@ -1,0 +1,106 @@
+@import "variables";
+
+.button {
+  border: solid 1px #9b9b9b;
+  appearance: none;
+  font-family: $fontFamily;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  color: #dddddd;
+  padding: 12px 15px;
+  font-weight: 300;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.disabled {
+    background-color: rgba(200,200,200,0.2) !important;
+    border: 1px solid rgba(200, 200, 200, 0.6) !important;
+    color: rgba(200, 200, 200, 0.6) !important;
+    cursor: not-allowed;
+  }
+
+  &.positive {
+    background-color: $positive;
+    color: #dddddd;
+  }
+
+  &.light {
+    background-color: $light;
+    color: #444;
+  }
+
+  &.assertive {
+    background-color: white;
+    color: $assertive;
+    border: 1px solid darken($assertive, 5%);
+    width: 210px;
+  }
+
+  &.stable {
+    background-color: $stable;
+    color: #444;
+    height: 55px;
+    width: 210px;
+  }
+
+  &.default {
+    min-width: 210px;
+    width: auto;
+    background-color: $buttonDefault;
+    color: #dddddd;
+    border:1px solid $buttonDefault;
+  }
+
+  &.defaultLight {
+    width: 255px;
+    background-color: white;
+    color: $buttonDefault;
+    border:1px solid $buttonDefault;
+  }
+
+  &.clear {
+    background-color: transparent;
+    border: none;
+
+    &>i:first-child {
+      margin-right: 0;
+    }
+  }
+
+  > i:first-child {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  &.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i:first-child {
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+    }
+  }
+
+  @media (max-width: $mobileSize * 1.5) {
+    .text {
+      display: none;
+    }
+
+    > i:first-child {
+      margin: 0;
+    }
+  }
+
+}

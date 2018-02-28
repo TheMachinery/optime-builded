@@ -1,0 +1,43 @@
+{
+  "name": "Optime",
+  "slug": "optime",
+  "icon": "/img/icon.svg",
+  "description": "",
+  "source": "",
+  "developer": {
+    "name": "Younes Boulkaddid"
+  },
+  "default_locale": "fr",
+  "locales": {
+    "fr": {
+      "description": ""
+    }
+  },
+  "routes": {
+    "/": {
+      "folder": "/",
+      "index": "index.html",
+      "public": false
+    }
+  },
+  "version": "4.1.0",
+  "licence": "AGPL-3.0",
+  "permissions": {
+    "properties": {
+      "description": "App properties.",
+      "type": "com.optime.properties"
+    },
+    "geopoint": {
+      "description": "Try data request and add synthetics datasets.",
+      "type": "fr.orange.geopoint"
+    },
+    "phonecommunicationlog": {
+      "description": "Try data request and add synthetics datasets.",
+      "type": "fr.orange.phonecommunicationlog"
+    },
+    "videostream": {
+      "description": "Try data request and add synthetics datasets.",
+      "type": "fr.orange.videostream"
+    }
+  }
+}
